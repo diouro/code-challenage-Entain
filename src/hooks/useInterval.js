@@ -1,3 +1,4 @@
+// Libraries
 import { useEffect, useLayoutEffect, useRef } from 'react';
 
 function useInterval(callback, delay) {

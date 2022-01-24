@@ -1,3 +1,4 @@
+// Libraries
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -8,24 +9,24 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: 'red',
-    padding: 10,
+    backgroundColor: 'rgb(168,48,237)',
+    padding: 16,
     textAlign: 'center',
     justifyContent: 'center',
-    fontSize: 15,
+    fontSize: 16,
   },
   headerText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 800,
     color: 'white'
   },
   content: {
-    margin: 10,
+    margin: 12,
   },
   raceContainer: {
     flex: 1,
     flexDirection: 'row',
-    padding: 10,
+    padding: 12,
     borderColor: 'gray',
     borderWidth: 0.5,
     justifyContent: 'space-between',
@@ -43,17 +44,23 @@ const styles = StyleSheet.create({
   raceItem: {
     fontWeight: 700,
   },
+  raceStarted: {
+    backgroundColor: 'orange',
+  },
+  raceNext: {
+    backgroundColor: 'green',
+  },
   countdownContainer: {
     flex: 1,
+    maxWidth: 80,
   },
   countdownLabel: {
     color: 'white',
     textAlign: 'center',
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: 600,
     alignItems: 'center',
-    padding: 10,
-    minWidth: 80,
+    padding: 8,
   },
   filter: {
     padding: 10,
@@ -65,7 +72,7 @@ const styles = StyleSheet.create({
     marginTop: 40,    
   },
   noRaces: {
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: 600,
   },
   picker: {

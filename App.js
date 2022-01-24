@@ -1,7 +1,16 @@
-import { View } from 'react-native';
+// Libraries
 import { Provider } from 'react-redux'
+
+// UI
+import { View } from 'react-native';
+
+// Reducer
 import store from './src/reducer/store';
-import styles from './src/styles/main';
+
+// Styles
+import styles from './src/styles/styles';
+
+// Components
 import Races from './src/components/Race/Races';
 
 export default function App() {

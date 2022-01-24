@@ -1,15 +1,26 @@
+// Libraries
 import { useEffect, useState } from 'react';
 import { Text, View, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+
+// Backend
 import { getRaces } from '../../actions/api';
+
+// Utils
+import useInterval from '../../hooks/useInterval';
 import { selectRaces } from '../../selectors/racesSelector';
+import { getSortedRaceIds } from '../../utils/sort';
+
+// Components
 import Race from './Race';
 import Filter from '../Filter/Filter';
+
+// Constants
 import { FILTER_OPTIONS } from '../../constants/contants';
 import { LIMIT_RACES_DISPLAY_INDEX, PULL_INTERVAL, UI_REFRESH_INTERVAL } from '../../constants/contants';
-import { getSortedRaceIds } from '../../utils/sort';
-import useInterval from '../../hooks/useInterval';
-import styles from '../../styles/main';
+
+// Styles
+import styles from '../../styles/styles';
 
 const Races = () => {
     const dispatch = useDispatch();
@@ -52,9 +63,9 @@ const Races = () => {
             </View>
             <View style={styles.filter}>
                 <Filter 
-                    selected={selectedFilter} 
+                    selectedOption={selectedFilter} 
                     options={FILTER_OPTIONS}
-                    onFilterSelected={handleFilterChange}
+                    onSelectOption={handleFilterChange}
                 />
             </View>
             <View style={styles.content}>

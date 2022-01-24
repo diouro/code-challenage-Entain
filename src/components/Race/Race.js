@@ -1,14 +1,16 @@
+// Libraries
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { PropTypes } from 'prop-types';
+
+// UI/Styles
 import { Text, View } from 'react-native';
-import { selectNextRaces } from '../../selectors/racesSelector';
-import styles from '../../styles/main';
+import styles from '../../styles/styles';
 
 const Race = ({ name, number, countdown, hasFinished }) => {
     const countDownTitle = () => {
         if (hasFinished) {
-            return 'FT'
+            return 'BEGAN'
         }
         return countdown > 60 ? `${Math.ceil(countdown / 60)} min` : `${countdown} secs`;
     }
@@ -20,7 +22,7 @@ const Race = ({ name, number, countdown, hasFinished }) => {
                 </View>
                 <Text>Number: {number}</Text>
             </View>
-            <View style={{ backgroundColor: hasFinished ? 'red' : 'green', ...styles.countdownContainer }}>
+            <View style={[hasFinished ? styles.raceStarted : styles.raceNext, styles.countdownContainer]}>
                 <Text style={styles.countdownLabel}>{countDownTitle()}</Text>
             </View>
         </View>
