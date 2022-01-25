@@ -1,8 +1,9 @@
 // Libraries
-import { Provider } from 'react-redux'
+import React from 'react';
+import {Provider} from 'react-redux';
 
 // UI
-import { View } from 'react-native';
+import {View} from 'react-native';
 
 // Reducer
 import store from './src/reducer/store';

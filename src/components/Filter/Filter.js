@@ -1,34 +1,34 @@
 // Libraries
-import { useEffect } from 'react';
-import { PropTypes } from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import {PropTypes} from 'prop-types';
 
 // UI
-import { Picker, View } from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 import styles from '../../styles/styles';
 
-const Filter = ({ selectedOption, options, onSelectOption }) => {
-    return (
-        <Picker
-            style={styles.picker}
-            selectedValue={selectedOption}
-            onValueChange={(value) => onSelectOption(value)}
-        >
-            {options.map(item => (
-                <Picker.Item key={item.value} label={item.label} value={item.value} />
-            ))}
-        </Picker>
-    )
-}
+const Filter = ({selectedOption, options, onSelectOption, show}) => {
+  return (
+    <Picker
+      style={styles.picker}
+      selectedValue={selectedOption}
+      onValueChange={value => onSelectOption(value)}>
+      {options.map(item => (
+        <Picker.Item key={item.value} label={item.label} value={item.value} />
+      ))}
+    </Picker>
+  );
+};
 
 Filter.propTypes = {
-    selectedOption: PropTypes.string,
-    options: PropTypes.array.isRequired,
-    onSelectOption: PropTypes.func.isRequired
-}
+  selectedOption: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  onSelectOption: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+};
 
 Filter.defaultProps = {
-    selectedOption: '',
-}
+  selectedOption: '',
+  show: false,
+};
 
 export default Filter;

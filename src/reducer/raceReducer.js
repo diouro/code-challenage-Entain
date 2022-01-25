@@ -1,5 +1,5 @@
 // Libraries
-import { createSlice, createAction } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {};
 
@@ -10,9 +10,9 @@ export const raceReducer = createSlice({
     setRaces: (state, action) => {
       state.races = action.payload;
     },
-  }
-})
+  },
+});
 
-export const { setRaces } = raceReducer.actions;
+export const {setRaces} = raceReducer.actions;
 
 export default raceReducer.reducer;
