@@ -9,12 +9,19 @@ type Props = {
   name: string;
   number: number;
   countdown: number;
-  hasFinished: boolean;
+  hasStarted: boolean;
 };
 
-const Race = ({name, number, countdown, hasFinished = false}: Props) => {
+/**
+ *
+ * @param name race name
+ * @param number race number
+ * @param countdown countdown seconds to race start
+ * @param hasStarted defines if the race has started
+ */
+const Race = ({name, number, countdown, hasStarted = false}: Props) => {
   const countDownTitle = (): string => {
-    if (hasFinished) {
+    if (hasStarted) {
       return 'BEGAN';
     }
     return countdown > 60
@@ -31,7 +38,7 @@ const Race = ({name, number, countdown, hasFinished = false}: Props) => {
       </View>
       <View
         style={[
-          hasFinished ? styles.raceStarted : styles.raceNext,
+          hasStarted ? styles.raceStarted : styles.raceNext,
           styles.countdownContainer,
         ]}>
         <Text style={styles.countdownLabel}>{countDownTitle()}</Text>

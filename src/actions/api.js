@@ -11,6 +11,9 @@ import {setRaces} from '../reducer/raceReducer';
 import {sortRaces} from '../utils/sort';
 import {extractResponseData} from './util';
 
+/**
+ * Fetch list of races from neds api and load the data to redux
+ */
 export const getRaces =
   () =>
   async (dispatch: Dispatch): void => {

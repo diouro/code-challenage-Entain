@@ -1,5 +1,10 @@
 import {Races, Race} from '../types/tyles';
 
+/**
+ * @param a Race
+ * @param b Race
+ * @returns compare result
+ */
 function compare(a: Race, b: Race): number {
   if (a.advertised_start.seconds < b.advertised_start.seconds) {
     return -1;
@@ -10,6 +15,11 @@ function compare(a: Race, b: Race): number {
   return 0;
 }
 
+/**
+ * Sort and transform races ascending
+ * @param data
+ * @returns
+ */
 export const sortRaces = (data: Races) => {
   if (!data) {
     return data;

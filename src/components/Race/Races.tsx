@@ -30,6 +30,11 @@ import {
 import styles from '../../styles/styles';
 import {Race as RaceType} from '../../types/tyles';
 
+/**
+ * Component to dislay list of races.
+ * Sort and limit the number of items to display, it also filter if user has selected a category
+ * Races should dissaper after 1 minute of the start time
+ */
 const Races = () => {
   const dispatch = useDispatch();
   const nextRacesIds = useSelector(selectRaceNext);
@@ -130,6 +135,7 @@ const Races = () => {
                 raceSummary;
               const {seconds: raceTime} = advertised_start;
               const countdown = Math.ceil(raceTime - now);
+              const hasStarted = raceTime < now;
               if (raceTime > countdown + 60) {
                 return (
                   <Race
@@ -137,7 +143,7 @@ const Races = () => {
                     name={meeting_name}
                     number={race_number}
                     countdown={countdown}
-                    hasFinished={raceTime < now}
+                    hasStarted={hasStarted}
                   />
                 );
               }

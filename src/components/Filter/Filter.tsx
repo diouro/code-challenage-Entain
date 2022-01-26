@@ -13,6 +13,15 @@ type Props = {
   onSelectOption: (value: string) => any;
 };
 
+/**
+ *
+ * Component to handle race filters picker
+ *
+ * @param selectedOption value selected by the user
+ * @param options filter options for user selection
+ * @param onSelectOption callback function
+ *
+ */
 const Filter = ({selectedOption, options, onSelectOption}: Props) => {
   return (
     <Picker
