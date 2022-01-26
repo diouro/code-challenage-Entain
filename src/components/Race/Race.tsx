@@ -1,13 +1,19 @@
 // Libraries
-import React from 'react';
-import {PropTypes} from 'prop-types';
+import * as React from 'react';
 
 // UI/Styles
 import {Text, View} from 'react-native';
 import styles from '../../styles/styles';
 
-const Race = ({name, number, countdown, hasFinished}) => {
-  const countDownTitle = () => {
+type Props = {
+  name: string;
+  number: number;
+  countdown: number;
+  hasFinished: boolean;
+};
+
+const Race = ({name, number, countdown, hasFinished = false}: Props) => {
+  const countDownTitle = (): string => {
     if (hasFinished) {
       return 'BEGAN';
     }
@@ -32,17 +38,6 @@ const Race = ({name, number, countdown, hasFinished}) => {
       </View>
     </View>
   );
-};
-
-Race.propTypes = {
-  name: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
-  countdown: PropTypes.number.isRequired,
-  hasFinished: PropTypes.bool,
-};
-
-Race.defaultProps = {
-  hasFinished: false,
 };
 
 export default Race;

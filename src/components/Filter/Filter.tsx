@@ -1,12 +1,20 @@
 // Libraries
-import React from 'react';
-import {PropTypes} from 'prop-types';
+import * as React from 'react';
 
 // UI
 import {Picker} from '@react-native-picker/picker';
 import styles from '../../styles/styles';
 
-const Filter = ({selectedOption, options, onSelectOption, show}) => {
+type Props = {
+  selectedOption: string;
+  options: Array<{
+    value: string;
+    label: string;
+  }>;
+  onSelectOption: (value: string) => any;
+};
+
+const Filter = ({selectedOption, options, onSelectOption}: Props) => {
   return (
     <Picker
       style={styles.picker}
@@ -17,18 +25,6 @@ const Filter = ({selectedOption, options, onSelectOption, show}) => {
       ))}
     </Picker>
   );
-};
-
-Filter.propTypes = {
-  selectedOption: PropTypes.string,
-  options: PropTypes.array.isRequired,
-  onSelectOption: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-};
-
-Filter.defaultProps = {
-  selectedOption: '',
-  show: false,
 };
 
 export default Filter;

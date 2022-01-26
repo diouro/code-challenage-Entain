@@ -1,7 +1,7 @@
 // Libraries
 import {useEffect, useLayoutEffect, useRef} from 'react';
 
-function useInterval(callback, delay) {
+function useInterval(callback: () => any, delay: number): void {
   const savedCallback = useRef(callback);
 
   // Remember the latest callback if it changes.

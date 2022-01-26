@@ -1,4 +1,6 @@
-function compare(a, b) {
+import {Races, Race} from '../types/tyles';
+
+function compare(a: Race, b: Race): number {
   if (a.advertised_start.seconds < b.advertised_start.seconds) {
     return -1;
   }
@@ -8,7 +10,7 @@ function compare(a, b) {
   return 0;
 }
 
-export const sortRaces = data => {
+export const sortRaces = (data: Races) => {
   if (!data) {
     return data;
   }

@@ -1,5 +1,5 @@
 // Libraries
-import React from 'react';
+import * as React from 'react';
 import {useEffect, useState} from 'react';
 import {Text, View, ActivityIndicator, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -9,7 +9,10 @@ import {getRaces} from '../../actions/api';
 
 // Utils
 import useInterval from '../../hooks/useInterval';
-import {selectRaces} from '../../selectors/racesSelector';
+import {
+  selectRaceNext,
+  selectRaceSummaries,
+} from '../../selectors/racesSelector';
 
 // Components
 import Race from './Race';
@@ -28,7 +31,8 @@ import styles from '../../styles/styles';
 
 const Races = () => {
   const dispatch = useDispatch();
-  const races = useSelector(selectRaces);
+  const nextRacesIds = useSelector(selectRaceNext);
+  const raceSummaries = useSelector(selectRaceSummaries);
   const [fetching, setFetching] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState('none');
   const [now, setNow] = useState(Date.now() / 1000);
@@ -45,28 +49,35 @@ const Races = () => {
   }, UI_REFRESH_INTERVAL);
 
   useEffect(() => {
-    if (!races) {
+    if (!nextRacesIds) {
       fetchRaces();
     }
   });
 
-  const fetchRaces = () => {
+  const fetchRaces = (): void => {
     setFetching(true);
     dispatch(getRaces());
     setFetching(false);
   };
 
-  const handleFilterChange = newFilter => {
+  const handleFilterChange = (newFilter: string) => {
     setSelectedFilter(newFilter);
     handleshowFilter();
   };
 
-  const handleshowFilter = () => {
+  const handleshowFilter = (): void => {
     setToogleFilte(!showFilter);
   };
 
-  const getFilterLabel = () =>
-    FILTER_OPTIONS.find(item => item.value === selectedFilter).label;
+  const getFilterLabel = (): string => {
+    const optionSelected = FILTER_OPTIONS.find(
+      item => item.value === selectedFilter,
+    );
+    if (optionSelected) {
+      return optionSelected.label;
+    }
+    return '';
+  };
 
   return (
     <View style={styles.container}>
@@ -80,32 +91,38 @@ const Races = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.racesContainer}>
-          {fetching && <ActivityIndicator loading={fetching} />}
-          {races && races.next.length > 0 ? (
-            races.next.slice(0, LIMIT_RACES_DISPLAY_INDEX).map((id, index) => {
-              const raceSummary = races.summaries[id];
-              const {meeting_name, race_number, advertised_start, category_id} =
-                raceSummary;
-              if (
-                !selectedFilter ||
-                selectedFilter === 'none' ||
-                selectedFilter === category_id
-              ) {
-                const {seconds: raceTime} = advertised_start;
-                const countdown = Math.ceil(raceTime - now);
-                if (raceTime > countdown + 60) {
-                  return (
-                    <Race
-                      key={id}
-                      name={meeting_name}
-                      number={race_number}
-                      countdown={countdown}
-                      hasFinished={raceTime < now}
-                    />
-                  );
+          {fetching && <ActivityIndicator animating={fetching} />}
+          {nextRacesIds && nextRacesIds.length > 0 ? (
+            nextRacesIds
+              .slice(0, LIMIT_RACES_DISPLAY_INDEX)
+              .map((id: string) => {
+                const raceSummary = raceSummaries[id];
+                const {
+                  meeting_name,
+                  race_number,
+                  advertised_start,
+                  category_id,
+                } = raceSummary;
+                if (
+                  !selectedFilter ||
+                  selectedFilter === 'none' ||
+                  selectedFilter === category_id
+                ) {
+                  const {seconds: raceTime} = advertised_start;
+                  const countdown = Math.ceil(raceTime - now);
+                  if (raceTime > countdown + 60) {
+                    return (
+                      <Race
+                        key={id}
+                        name={meeting_name}
+                        number={race_number}
+                        countdown={countdown}
+                        hasFinished={raceTime < now}
+                      />
+                    );
+                  }
                 }
-              }
-            })
+              })
           ) : (
             <View style={styles.noRacesContainer}>
               <Text style={styles.noRaces}>No races to display</Text>
@@ -120,7 +137,6 @@ const Races = () => {
             selectedOption={selectedFilter}
             options={FILTER_OPTIONS}
             onSelectOption={handleFilterChange}
-            show={showFilter}
           />
         )}
       </View>
