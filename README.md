@@ -11,11 +11,16 @@ Project dependancies
 
 run `yarn`
 
+Before running the iOS app you must install the pod dependacies.
+
+run `cd ios` && `pod install`
+
 ## Run
 
 To start server run `yarn start`
-To run on iOS run `yarn ios`
-To run on Android run `yarn android`
+
+Run on iOS `yarn ios`
+Run on Android `yarn android`
 
 ## Test
 
