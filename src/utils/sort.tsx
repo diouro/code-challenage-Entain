@@ -1,4 +1,4 @@
-import {Races, Race} from '../types/tyles';
+import {RacesResponse, Race, Races} from '../types/tyles';
 
 /**
  * @param a Race
@@ -20,7 +20,7 @@ function compare(a: Race, b: Race): number {
  * @param data
  * @returns
  */
-export const sortRaces = (data: Races) => {
+export const sortRaces = (data: RacesResponse): Races => {
   if (!data) {
     return data;
   }

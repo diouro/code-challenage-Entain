@@ -1,5 +1,7 @@
 // Libraries
+import {Action} from '@reduxjs/toolkit';
 import axios from 'axios';
+import {Dispatch} from 'react';
 
 // Constants
 import {URL_RACE_LIST} from '../constants/endpoint';
@@ -16,7 +18,7 @@ import {extractResponseData} from './util';
  */
 export const getRaces =
   () =>
-  async (dispatch: Dispatch): void => {
+  async (dispatch: Dispatch<Action>): Promise<void> => {
     try {
       const params = {
         method: 'nextraces',
@@ -34,7 +36,8 @@ export const getRaces =
       // Dispatch result to redux
       const data = extractResponseData(response);
       if (data) {
-        dispatch(setRaces(sortRaces(data)));
+        const sortedData = sortRaces(data);
+        dispatch(setRaces(sortedData));
       }
     } catch (error) {
       // ignore for now

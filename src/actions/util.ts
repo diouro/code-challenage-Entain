@@ -1,14 +1,23 @@
+import {RacesResponse} from '../types/tyles';
+
+interface Response {
+  status: number;
+  data: any;
+}
+
 /**
  * Method help to extract the response from axios response
  * @param {*} response
  * @returns extracted data from response
  */
-export const extractResponseData = (response: object): ?object => {
+export const extractResponseData = (
+  response: Response,
+): RacesResponse | null => {
   if (response) {
     const {status, data} = response;
     if ([200].includes(status) && data.data) {
       return data.data;
     }
   }
-  return false;
+  return null;
 };

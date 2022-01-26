@@ -1,4 +1,4 @@
-export interface Races {
+export interface RacesResponse {
   next_to_go_ids: Array<string>;
   race_summaries: Array<Race>;
 }
@@ -12,3 +12,12 @@ export interface Race {
     seconds: number;
   };
 }
+
+export type Races = {
+  summaries: Array<Race>;
+  next: Array<string>;
+};
+
+export type rootState = {
+  races: Races;
+};

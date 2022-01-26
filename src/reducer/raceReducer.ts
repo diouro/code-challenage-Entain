@@ -2,20 +2,13 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 // types
-import {Race} from '../types/tyles';
+import {Races} from '../types/tyles';
 
 const initialState = {};
 
 type Action = {
   type: string;
-  payload: Array<Race>;
-};
-
-export type rootState = {
-  races: {
-    summaries: Array<Race>;
-    next: Array<string>;
-  };
+  payload: Races;
 };
 
 export const raceReducer = createSlice({

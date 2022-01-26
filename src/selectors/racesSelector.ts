@@ -1,6 +1,5 @@
 // types
-import {rootState} from '../reducer/raceReducer';
-import {Race} from '../types/tyles';
+import {rootState, Race} from '../types/tyles';
 
 export const selectRaceSummaries = (state: rootState): Array<Race> | null =>
   state.races ? state.races.summaries : [];
