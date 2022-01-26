@@ -8,11 +8,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  statsBar: {
+    height: 24,
+    backgroundColor: entainColor,
+  },
   header: {
-    minHeight: 80,
+    minHeight: 60,
     backgroundColor: entainColor,
     justifyContent: 'center',
-    paddingTop: 24,
   },
   headerText: {
     fontSize: 20,
@@ -23,6 +26,7 @@ const styles = StyleSheet.create({
   },
   content: {
     margin: 12,
+    flex: 1,
   },
   filterContainer: {
     padding: 10,
@@ -76,7 +80,6 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   noRacesContainer: {
-    flex: 1,
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 40,
@@ -84,9 +87,6 @@ const styles = StyleSheet.create({
   noRaces: {
     fontSize: 18,
     fontWeight: '600',
-  },
-  picker: {
-    alignContent: 'flex-end',
   },
 });
 

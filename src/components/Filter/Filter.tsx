@@ -3,7 +3,6 @@ import * as React from 'react';
 
 // UI
 import {Picker} from '@react-native-picker/picker';
-import styles from '../../styles/styles';
 
 type Props = {
   selectedOption: string;
@@ -17,7 +16,6 @@ type Props = {
 const Filter = ({selectedOption, options, onSelectOption}: Props) => {
   return (
     <Picker
-      style={styles.picker}
       selectedValue={selectedOption}
       onValueChange={value => onSelectOption(value)}>
       {options.map(item => (
