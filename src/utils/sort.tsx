@@ -1,4 +1,4 @@
-import {RacesResponse, Race, Races} from '../types/tyles';
+import {RacesResponse, Race, Races} from '@src/types/tyles';
 
 /**
  * @param a Race
@@ -27,12 +27,10 @@ export const sortRaces = (data: RacesResponse): Races => {
 
   const {race_summaries} = data;
 
-  const sortedRaces = Object.values(race_summaries)
-    .sort(compare)
-    .map(race => race.race_id);
+  const sortedRaces = Object.values(race_summaries).sort(compare);
 
   return {
-    next: sortedRaces,
+    next: sortedRaces.map(race => race.race_id),
     summaries: race_summaries,
   };
 };

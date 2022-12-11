@@ -1,7 +1,7 @@
-import reducer from './raceReducer';
+import reducer, {initialState} from '../raceReducer';
 
 test('should return the initial state', () => {
-  expect(reducer(undefined, {})).toEqual({});
+  expect(reducer(undefined, {})).toEqual(initialState);
 });
 
 test('should return a valid state', () => {

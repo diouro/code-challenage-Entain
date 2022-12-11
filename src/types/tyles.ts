@@ -20,4 +20,5 @@ export type Races = {
 
 export type rootState = {
   races: Races;
+  loading: boolean;
 };

@@ -1,4 +1,4 @@
-import {extractResponseData} from './util';
+import {extractResponseData} from '../util';
 
 describe('Util test', () => {
   test('test can extract data', () => {
@@ -17,7 +17,7 @@ describe('Util test', () => {
     const response = {
       status: 404,
     };
-    expect(extractResponseData(response)).toBe(false);
+    expect(extractResponseData(response)).toBe(null);
   });
 
   test('test fail invalid data', () => {
@@ -29,6 +29,6 @@ describe('Util test', () => {
         },
       },
     };
-    expect(extractResponseData(response)).toBe(false);
+    expect(extractResponseData(response)).toBe(null);
   });
 });

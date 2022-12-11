@@ -1,9 +1,9 @@
 // Libraries
-import * as React from 'react';
+import React, {useCallback} from 'react';
 
 // UI/Styles
 import {Text, View} from 'react-native';
-import styles from '../../styles/styles';
+import styles from '@src/styles/styles';
 
 type Props = {
   name: string;
@@ -20,14 +20,23 @@ type Props = {
  * @param hasStarted defines if the race has started
  */
 const Race = ({name, number, countdown, hasStarted = false}: Props) => {
-  const countDownTitle = (): string => {
+  /**
+   * Return the countdown either in minutes or seconds
+   */
+  const countDownTitle = useCallback((): string => {
     if (hasStarted) {
       return 'BEGAN';
     }
     return countdown > 60
       ? `${Math.ceil(countdown / 60)} min`
       : `${countdown} secs`;
+  }, [hasStarted, countdown]);
+
+  const textStyle = {
+    ...styles.countdownLabel,
+    ...(hasStarted ? styles.raceStarted : styles.raceNext),
   };
+
   return (
     <View style={styles.raceContainer}>
       <View>
@@ -36,13 +45,7 @@ const Race = ({name, number, countdown, hasStarted = false}: Props) => {
         </View>
         <Text>Number: {number}</Text>
       </View>
-      <View
-        style={[
-          hasStarted ? styles.raceStarted : styles.raceNext,
-          styles.countdownContainer,
-        ]}>
-        <Text style={styles.countdownLabel}>{countDownTitle()}</Text>
-      </View>
+      <Text style={textStyle}>{countDownTitle()}</Text>
     </View>
   );
 };

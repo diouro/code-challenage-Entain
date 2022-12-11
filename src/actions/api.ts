@@ -4,13 +4,13 @@ import axios from 'axios';
 import {Dispatch} from 'react';
 
 // Constants
-import {URL_RACE_LIST} from '../constants/endpoint';
+import {URL_RACE_LIST} from '@src/constants/endpoint';
 
 // Reduce
-import {setRaces} from '../reducer/raceReducer';
+import {setLoading, setRaces} from '@src/reducer/raceReducer';
 
 // Utils
-import {sortRaces} from '../utils/sort';
+import {sortRaces} from '@src/utils/sort';
 import {extractResponseData} from './util';
 
 /**
@@ -20,6 +20,9 @@ export const getRaces =
   () =>
   async (dispatch: Dispatch<Action>): Promise<void> => {
     try {
+      // Update hook loading state
+      dispatch(setLoading(true));
+
       const params = {
         method: 'nextraces',
         count: 10,
@@ -42,4 +45,7 @@ export const getRaces =
     } catch (error) {
       // ignore for now
     }
+
+    // Update hook loading state
+    dispatch(setLoading(false));
   };

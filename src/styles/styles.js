@@ -1,20 +1,22 @@
 // Libraries
 import {StyleSheet} from 'react-native';
 
-const entainColor = 'rgb(168,48,237)';
+export const COLOUR_ENTAIN = 'rgb(168,48,237)';
+export const COLOUR_GREY = '#f5f5f5';
+export const COLOUR_GREY_DARK = '#212121';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: COLOUR_GREY,
   },
   statsBar: {
     height: 24,
-    backgroundColor: entainColor,
+    backgroundColor: COLOUR_ENTAIN,
   },
   header: {
     minHeight: 60,
-    backgroundColor: entainColor,
+    backgroundColor: COLOUR_ENTAIN,
     justifyContent: 'center',
   },
   headerText: {
@@ -29,15 +31,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   filterContainer: {
-    padding: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  filterButton: {
+    width: 85,
+    margin: 4,
+    padding: 8,
+    alignItems: 'center',
+    borderRadius: 4,
   },
   filterText: {
-    fontSize: 20,
-    textAlign: 'center',
-    fontWeight: '500',
-    borderWidth: 0.5,
-    borderColor: 'black',
-    padding: 10,
+    color: 'white',
+    fontSize: 12,
+    fontWeight: '600',
   },
   racesContainer: {
     marginTop: 10,
@@ -45,15 +52,14 @@ const styles = StyleSheet.create({
   raceContainer: {
     flexDirection: 'row',
     padding: 12,
-    borderColor: 'gray',
-    borderWidth: 1,
+    backgroundColor: 'white',
     justifyContent: 'space-between',
     marginBottom: 8,
     shadowOffset: {
-      width: 1,
-      height: 2,
+      width: 0.5,
+      height: 0.5,
     },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.1,
   },
   raceLabelContainer: {
     flexDirection: 'row',
@@ -62,10 +68,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   raceStarted: {
-    backgroundColor: 'orange',
+    color: 'orange',
   },
   raceNext: {
-    backgroundColor: 'green',
+    color: 'green',
   },
   countdownContainer: {
     flex: 1,

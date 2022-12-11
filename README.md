@@ -11,7 +11,7 @@ Project dependancies
 
 run `yarn`
 
-Before running the iOS app you must install the pod dependacies.
+Before running the iOS app you must install the pod dependancies.
 
 run `cd ios` && `pod install`
 

@@ -1,16 +1,18 @@
 // Libraries
 import * as React from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
 
 // UI
-import {Picker} from '@react-native-picker/picker';
+// import {Picker} from '@react-native-picker/picker';
+import styles, {COLOUR_ENTAIN, COLOUR_GREY_DARK} from '@src/styles/styles';
 
 type Props = {
-  selectedOption: string;
+  selectedOption?: string | null | undefined;
   options: Array<{
     value: string;
     label: string;
   }>;
-  onSelectOption: (value: string) => any;
+  onSelectOption: (value: string) => void;
 };
 
 /**
@@ -24,13 +26,27 @@ type Props = {
  */
 const Filter = ({selectedOption, options, onSelectOption}: Props) => {
   return (
-    <Picker
-      selectedValue={selectedOption}
-      onValueChange={value => onSelectOption(value)}>
-      {options.map(item => (
-        <Picker.Item key={item.value} label={item.label} value={item.value} />
-      ))}
-    </Picker>
+    <View testID="filter-picker" style={styles.filterContainer}>
+      {options.map(item => {
+        const buttonStyle = [
+          styles.filterButton,
+          {
+            backgroundColor:
+              item.value === selectedOption ? COLOUR_ENTAIN : COLOUR_GREY_DARK,
+          },
+        ];
+        return (
+          <TouchableOpacity
+            key={item.value}
+            style={buttonStyle}
+            onPress={() => onSelectOption(item.value)}>
+            <Text style={styles.filterText}>
+              {item.label?.replace(' Racing', '')}
+            </Text>
+          </TouchableOpacity>
+        );
+      })}
+    </View>
   );
 };
 

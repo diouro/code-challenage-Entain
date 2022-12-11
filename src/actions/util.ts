@@ -1,4 +1,4 @@
-import {RacesResponse} from '../types/tyles';
+import {RacesResponse} from '@src/types/tyles';
 
 interface Response {
   status: number;

@@ -10,11 +10,11 @@
 		00E356F31AD99517003FC87E /* EntainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EntainTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		42024A76476450EECB3C7A29 /* libPods-Entain-EntainTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5F77A9C6C07B591E7FF643 /* libPods-Entain-EntainTests.a */; };
+		5BC3DE20E475731CBB5E83B9 /* libPods-Entain-EntainTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A70F21E77C0841BB0AA0389 /* libPods-Entain-EntainTests.a */; };
 		7D8FD57927A0361E00B61642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8FD57827A0361E00B61642 /* Assets.xcassets */; };
 		7D8FD57D27A0364900B61642 /* entain-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D8FD57C27A0364900B61642 /* entain-icon.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F548345ADC51BAAB52288231 /* libPods-Entain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01E2B4419EBFADEA13140F /* libPods-Entain.a */; };
+		EC317CCB48F15178D2B492B8 /* libPods-Entain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B81D9BE1037BE6E94E260628 /* libPods-Entain.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,16 +36,16 @@
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Entain/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Entain/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Entain/main.m; sourceTree = "<group>"; };
-		3786A1EC1D1C33902CE56B8B /* Pods-Entain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain.release.xcconfig"; path = "Target Support Files/Pods-Entain/Pods-Entain.release.xcconfig"; sourceTree = "<group>"; };
-		785357A738B392C9EA39D167 /* Pods-Entain-EntainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain-EntainTests.debug.xcconfig"; path = "Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1AD0D5B2A1EE4086CC3F5A /* Pods-Entain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain.release.xcconfig"; path = "Target Support Files/Pods-Entain/Pods-Entain.release.xcconfig"; sourceTree = "<group>"; };
+		707795D23727240CFEAAC9E6 /* Pods-Entain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain.debug.xcconfig"; path = "Target Support Files/Pods-Entain/Pods-Entain.debug.xcconfig"; sourceTree = "<group>"; };
 		7D8FD57827A0361E00B61642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D8FD57C27A0364900B61642 /* entain-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "entain-icon.png"; sourceTree = "<group>"; };
-		811CE414D53E61E97DB91B4D /* Pods-Entain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain.debug.xcconfig"; path = "Target Support Files/Pods-Entain/Pods-Entain.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Entain/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8A01E2B4419EBFADEA13140F /* libPods-Entain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC3A1EB13CCE9208AA65A32A /* Pods-Entain-EntainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain-EntainTests.release.xcconfig"; path = "Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests.release.xcconfig"; sourceTree = "<group>"; };
-		DC5F77A9C6C07B591E7FF643 /* libPods-Entain-EntainTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entain-EntainTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC4E8989CD5B6CF5997DFD2 /* Pods-Entain-EntainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain-EntainTests.release.xcconfig"; path = "Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A70F21E77C0841BB0AA0389 /* libPods-Entain-EntainTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entain-EntainTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81D9BE1037BE6E94E260628 /* libPods-Entain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FBBD8F994F6D3A381EBF2C86 /* Pods-Entain-EntainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entain-EntainTests.debug.xcconfig"; path = "Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42024A76476450EECB3C7A29 /* libPods-Entain-EntainTests.a in Frameworks */,
+				5BC3DE20E475731CBB5E83B9 /* libPods-Entain-EntainTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F548345ADC51BAAB52288231 /* libPods-Entain.a in Frameworks */,
+				EC317CCB48F15178D2B492B8 /* libPods-Entain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				8A01E2B4419EBFADEA13140F /* libPods-Entain.a */,
-				DC5F77A9C6C07B591E7FF643 /* libPods-Entain-EntainTests.a */,
+				B81D9BE1037BE6E94E260628 /* libPods-Entain.a */,
+				9A70F21E77C0841BB0AA0389 /* libPods-Entain-EntainTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,10 +143,10 @@
 		9A4B0697978B4E885CE37596 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				811CE414D53E61E97DB91B4D /* Pods-Entain.debug.xcconfig */,
-				3786A1EC1D1C33902CE56B8B /* Pods-Entain.release.xcconfig */,
-				785357A738B392C9EA39D167 /* Pods-Entain-EntainTests.debug.xcconfig */,
-				CC3A1EB13CCE9208AA65A32A /* Pods-Entain-EntainTests.release.xcconfig */,
+				707795D23727240CFEAAC9E6 /* Pods-Entain.debug.xcconfig */,
+				2C1AD0D5B2A1EE4086CC3F5A /* Pods-Entain.release.xcconfig */,
+				FBBD8F994F6D3A381EBF2C86 /* Pods-Entain-EntainTests.debug.xcconfig */,
+				8EC4E8989CD5B6CF5997DFD2 /* Pods-Entain-EntainTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,12 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EntainTests" */;
 			buildPhases = (
-				66CF0ED1200F2A734E95CC1D /* [CP] Check Pods Manifest.lock */,
+				47737443610C7EC5F1D28326 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				50DB3D2B29FF7460B870C420 /* [CP] Embed Pods Frameworks */,
-				1152BFB6657488908459FDCC /* [CP] Copy Pods Resources */,
+				B4821C5BAF0F784E830A20AF /* [CP] Embed Pods Frameworks */,
+				F32C7542E1670E531434CAAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,14 +179,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Entain" */;
 			buildPhases = (
-				070D78A3396622FA8585915B /* [CP] Check Pods Manifest.lock */,
+				FB070C54C1553609D0B98ABC /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				A0BCD977D6FA920C0C3FD1FC /* [CP] Embed Pods Frameworks */,
-				22C4763D9320B0CFE42185D6 /* [CP] Copy Pods Resources */,
+				13928578AF46182EC7A5B9BF /* [CP] Embed Pods Frameworks */,
+				2B5549B06E9CE17616383894 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,46 +268,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		070D78A3396622FA8585915B /* [CP] Check Pods Manifest.lock */ = {
+		13928578AF46182EC7A5B9BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Entain-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1152BFB6657488908459FDCC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		22C4763D9320B0CFE42185D6 /* [CP] Copy Pods Resources */ = {
+		2B5549B06E9CE17616383894 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,24 +302,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		50DB3D2B29FF7460B870C420 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66CF0ED1200F2A734E95CC1D /* [CP] Check Pods Manifest.lock */ = {
+		47737443610C7EC5F1D28326 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,21 +324,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0BCD977D6FA920C0C3FD1FC /* [CP] Embed Pods Frameworks */ = {
+		B4821C5BAF0F784E830A20AF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain/Pods-Entain-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32C7542E1670E531434CAAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Entain-EntainTests/Pods-Entain-EntainTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB070C54C1553609D0B98ABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Entain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -432,7 +432,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 785357A738B392C9EA39D167 /* Pods-Entain-EntainTests.debug.xcconfig */;
+			baseConfigurationReference = FBBD8F994F6D3A381EBF2C86 /* Pods-Entain-EntainTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -459,7 +459,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC3A1EB13CCE9208AA65A32A /* Pods-Entain-EntainTests.release.xcconfig */;
+			baseConfigurationReference = 8EC4E8989CD5B6CF5997DFD2 /* Pods-Entain-EntainTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -483,7 +483,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 811CE414D53E61E97DB91B4D /* Pods-Entain.debug.xcconfig */;
+			baseConfigurationReference = 707795D23727240CFEAAC9E6 /* Pods-Entain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,7 +509,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3786A1EC1D1C33902CE56B8B /* Pods-Entain.release.xcconfig */;
+			baseConfigurationReference = 2C1AD0D5B2A1EE4086CC3F5A /* Pods-Entain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

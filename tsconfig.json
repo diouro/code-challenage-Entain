@@ -12,7 +12,11 @@
         "noEmit": true,
         "strict": true,
         "target": "esnext",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": ["src/*/index", "src/*"]
+        },
     },
     "exclude": [
         "node_modules",
