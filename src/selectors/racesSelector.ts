@@ -1,12 +1,12 @@
 // types
-import {rootState, Race} from '@src/types/tyles';
+import {rootState, RaceType} from '@src/types';
 
 /**
  * Redux state selector for Race summaries
  * @param state
  * @returns array of Races
  */
-export const selectRaceSummaries = (state: rootState): Array<Race> | null =>
+export const selectRaceSummaries = (state: rootState): Array<RaceType> =>
   state?.races?.summaries || [];
 
 /**
@@ -14,8 +14,8 @@ export const selectRaceSummaries = (state: rootState): Array<Race> | null =>
  * @param state
  * @returns array of next races
  */
-export const selectRaceNext = (state: rootState): Array<string> | null =>
-  state?.races?.next || null;
+export const selectRaceNext = (state: rootState): Array<string> =>
+  state?.races?.next || [];
 
 /**
  * Redux state selector for data loading

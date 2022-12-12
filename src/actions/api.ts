@@ -14,7 +14,7 @@ import {sortRaces} from '@src/utils/sort';
 import {extractResponseData} from './util';
 
 /**
- * Fetch list of races from neds api and load the data to redux
+ * Fetch list of races from Neds api and load the data to redux
  */
 export const getRaces =
   () =>

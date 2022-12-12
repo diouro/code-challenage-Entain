@@ -1,3 +1,4 @@
+// Libraries
 import React from 'react';
 import {
   render,
@@ -5,7 +6,11 @@ import {
   waitFor,
   fireEvent,
 } from '@testing-library/react-native';
-import {FILTER_OPTIONS} from '@src/constants/contants';
+
+// Constants
+import {FILTER_OPTIONS} from '@src/constants';
+
+// Component
 import Filter from '../Filter';
 
 describe('Filter Component test', () => {
@@ -14,12 +19,12 @@ describe('Filter Component test', () => {
       <Filter
         options={FILTER_OPTIONS}
         onSelectOption={jest.fn()}
-        selectedOption="none"
+        selectedOption=""
       />,
     );
 
     await waitFor(async () => {
-      expect(screen.getByTestId('filter-picker')).toBeDefined();
+      expect(screen.getByTestId('filter')).toBeDefined();
     });
   });
 
@@ -29,12 +34,12 @@ describe('Filter Component test', () => {
       <Filter
         options={FILTER_OPTIONS}
         onSelectOption={onPress}
-        selectedOption="none"
+        selectedOption=""
       />,
     );
 
     await waitFor(async () => {
-      expect(screen.getByTestId('filter-picker')).toBeDefined();
+      expect(screen.getByTestId('filter')).toBeDefined();
     });
 
     fireEvent.press(screen.getByText('Greyhound'));

@@ -2,10 +2,11 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 // types
-import {Races} from '@src/types/tyles';
+import {Races} from '@src/types';
 
+// Initial state
 export const initialState = {
-  races: null,
+  races: [],
   loading: true,
 };
 
@@ -21,7 +22,10 @@ export const raceReducer = createSlice({
   reducers: {
     setRaces: (state: any, action: Action) => ({
       ...state,
-      races: action.payload,
+      races:
+        state.races.length > 0
+          ? [...state.races, action.payload]
+          : action.payload,
     }),
     setLoading: (state: any, action: Action) => ({
       ...state,

@@ -1,8 +1,8 @@
-# code-challenage-Entain
+# code-challenge-Entain
 
 Code challenge for Entain
 
-Project dependancies
+Project dependencies
 
 - Node version 16.0.0 ( but it might work fine with version 12 and above )
 - redux ( https://react-redux.js.org/ )
@@ -11,7 +11,7 @@ Project dependancies
 
 run `yarn`
 
-Before running the iOS app you must install the pod dependancies.
+Before running the iOS app you must install the pod dependencies.
 
 run `cd ios` && `pod install`
 

@@ -9,10 +9,10 @@ import {View} from 'react-native';
 import store from '@src/reducer/store';
 
 // Styles
-import styles from '@src/styles/styles';
+import {styles} from './styles';
 
 // Components
-import Races from '@src/components/Race/Races';
+import Races from '@src/components/Races/Races';
 
 export default function App() {
   return (

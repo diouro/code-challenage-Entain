@@ -1,3 +1,4 @@
+// Reducer
 import reducer, {initialState} from '../raceReducer';
 
 test('should return the initial state', () => {

@@ -1,51 +1,32 @@
 // Libraries
-import React, {useCallback} from 'react';
+import React from 'react';
 
 // UI/Styles
 import {Text, View} from 'react-native';
-import styles from '@src/styles/styles';
+import {styles} from './styles';
 
-type Props = {
+interface RaceType {
   name: string;
   number: number;
-  countdown: number;
-  hasStarted: boolean;
-};
+  countDown: string;
+}
 
 /**
  *
  * @param name race name
  * @param number race number
  * @param countdown countdown seconds to race start
- * @param hasStarted defines if the race has started
  */
-const Race = ({name, number, countdown, hasStarted = false}: Props) => {
-  /**
-   * Return the countdown either in minutes or seconds
-   */
-  const countDownTitle = useCallback((): string => {
-    if (hasStarted) {
-      return 'BEGAN';
-    }
-    return countdown > 60
-      ? `${Math.ceil(countdown / 60)} min`
-      : `${countdown} secs`;
-  }, [hasStarted, countdown]);
-
-  const textStyle = {
-    ...styles.countdownLabel,
-    ...(hasStarted ? styles.raceStarted : styles.raceNext),
-  };
-
+const Race = ({name, number, countDown}: RaceType) => {
   return (
     <View style={styles.raceContainer}>
       <View>
-        <View style={styles.raceLabelContainer}>
-          <Text style={styles.raceItem}>{name}</Text>
-        </View>
-        <Text>Number: {number}</Text>
+        <Text style={styles.raceItem}>{name}</Text>
       </View>
-      <Text style={textStyle}>{countDownTitle()}</Text>
+      <View style={styles.raceLabelContainer}>
+        <Text style={styles.countdownLabel}>{countDown}</Text>
+        <Text style={styles.raceNumber}>R{number}</Text>
+      </View>
     </View>
   );
 };
